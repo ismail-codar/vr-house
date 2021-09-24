@@ -3,7 +3,6 @@
 const express = require("express");
 const app = express();
 
-
 app.use(express.static("public"));
 
 app.get("/", (request, response) => {
@@ -12,6 +11,7 @@ app.get("/", (request, response) => {
 
 app.use("/build", express.static("build"));
 app.use("/assets", express.static("assets"));
+app.use("/poses", express.static("poses"));
 
 // listen for requests :)
 const listener = app.listen(process.env.PORT, () => {
