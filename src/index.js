@@ -1,1 +1,2 @@
-import './garden.js';
+import "./garden.js";
+import "./house.js";
