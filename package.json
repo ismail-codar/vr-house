@@ -4,7 +4,7 @@
   "description": "Garden for XR",
   "main": "index.js",
   "scripts": {
-    "start": "npm run  build; node ./",
+    "start": "npm run  build; PORT=3500 node ./",
     "build": "rollup -c; find build -maxdepth 1 -iname \"*.js\" -not -type d -exec du -h {} \\;",
     "develop": "rollup -w -c",
     "test": "echo \"Error: no test specified\" && exit 1"
