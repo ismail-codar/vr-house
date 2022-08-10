@@ -43,7 +43,7 @@ scene.add(cameraGroup);
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.maxPolarAngle = Math.PI * 0.5;
 controls.target = new Vector3(0, 1, -5);
-camera.position.set(0, 1.6, 0);
+camera.position.set(10, 1.6, 32.0);
 controls.update();
 
 function onWindowResize() {

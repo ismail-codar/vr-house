@@ -9,11 +9,11 @@ import * as THREE from "three";
 init();
 
 function init() {
-  const ambientLight = new THREE.AmbientLight(0xcccccc, 0.4);
-  scene.add(ambientLight);
+  //   const ambientLight = new THREE.AmbientLight(0xcccccc, 0.4);
+  //   scene.add(ambientLight);
 
-  const pointLight = new THREE.PointLight(0xffffff, 0.8);
-  camera.add(pointLight);
+  //   const pointLight = new THREE.PointLight(0xffffff, 0.8);
+  //   camera.add(pointLight);
 
   // model
 
@@ -33,17 +33,17 @@ function init() {
   // manager.addHandler( /\.tga$/i, new TGALoader() );
 
   new MTLLoader(manager)
-    .setPath("models/obj/male02/")
-    .load("male02_dds.mtl", function (materials) {
+    .setPath("models/obj/ev/")
+    .load("ev1.mtl", function (materials) {
       materials.preload();
 
       new OBJLoader(manager)
         .setMaterials(materials)
-        .setPath("models/obj/male02/")
+        .setPath("models/obj/ev/")
         .load(
-          "male02.obj",
+          "ev1.obj",
           function (object) {
-            // object.position.y = 95;
+            object.position.y = 0.001;
             object.scale.set(0.01, 0.01, 0.01);
             scene.add(object);
           },
